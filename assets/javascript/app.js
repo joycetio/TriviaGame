@@ -1,14 +1,19 @@
 $(document).ready(function() {
-	var questions = ["What is the state capital of Colorado?", "What is the state capital of Wyoming?", "What is California's state capital?", "What is Utah's state capital?", "What is Hawaii's state capital?"]; 
+	var questions = ["What is the state capital of Colorado?", "What is the state capital of Wyoming?", "What is California's state capital?", "What is Utah's state capital?", "What is Hawaii's state capital?", "What is Louisiana's state capital?", "What is Arkansas's state capital?", "What is the state capital of Texas?", "What is Alaska's state capital?", "What is New Mexico's state capital?"]; 
 
-	var answers = ["Denver", "Cheyenne", "Sacramento", "Salt Lake City", "Honolulu"]; 
+	var answers = ["Denver", "Cheyenne", "Sacramento", "Salt Lake City", "Honolulu", "Baton Rouge", "Little Rock", "Austin", "Juneau", "Santa Fe"]; 
 
 	var multipleChoice = [
 		["Springfield", "Columbus", "Denver", "Columbia"], 
 		["Cheyenne", "Lansing", "Bismarck", "Augusta"], 
 		["Albany", "Sacramento", "Honolulu", "Washington"], 
 		["Columbus", "Charlestone", "Nashville", "Salt Lake City"], 
-		["Helena", "Tallahassee", "Honolulu", "Providence"]]; 
+		["Helena", "Tallahassee", "Honolulu", "Providence"],
+		["Jefferson City", "Baton Rouge", "Jackson", "Santa Fe"],
+		["Little Rock", "Boston", "Concord", "Harrisburg"],
+		["Salt Lake City", "Annapolis", "Carson City", "Austin"], 
+		["Topeka", "Boise", "Juneau", "Jefferson City"], 
+		["Santa Fe", "Montpelier", "Des Moines", "Indianapolis"]]; 
 
 	var timer = 30; 
 	var numCorrectAnswers = 0; 
@@ -88,7 +93,7 @@ $(document).ready(function() {
 	}; 
 
 	function nextQuestion(){
-		if (numQ < 4){
+		if (numQ < 9){
 			numQ++; 
 			startGame();
 			timer = 30; 
