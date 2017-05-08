@@ -39,8 +39,6 @@ $(document).ready(function() {
 
 		var choiceList = "<h2><button class='btn btn-primary btn-md userChoice' href='#'> A. " + multipleChoice[numQ][0] + "</button></h2>" + "<h2><button class='btn btn-primary btn-md userChoice' href='#'> B. " + multipleChoice[numQ][1] + "</button></h2>" + "<h2><button class='btn btn-primary btn-md userChoice' href='#'> C. " + multipleChoice[numQ][2] + "</button></h2>" + "<h2><button class='btn btn-primary btn-md userChoice' href='#'> D. " + multipleChoice[numQ][3] + "</button></h2>";
 
-		// console.log(multipleChoice[numQ][0]);
-
 		$("#mainContent").html(timerHTML);
 		$("#mainContent").append(gameContent);
 		$("#mainContent").append(choiceList);
@@ -73,15 +71,12 @@ $(document).ready(function() {
 		}
 	});
 
-	// $("#mainContent").
-
 	function setTimer(){
 		clock = setInterval(numTime, 1000);
 
 		function numTime(){
 			if (timer === 0) {
 				clearInterval(clock);
-				// alert("Time's up! You lose!");
 				timerEnds();
 			}
 			if (timer > 0) {
@@ -101,7 +96,6 @@ $(document).ready(function() {
 		}
 		else {
 			gameResults();
-			// alert("congratulations!")
 		}
 	}; 
 
